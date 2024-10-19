@@ -29,7 +29,7 @@ export function getETHPriceInUSD(): BigDecimal {
   } else */
   
   if (usdcPair !== null) {
-    return usdcPair.token0Price;
+    return usdcPair.token1Price;
   } else {
     return BigDecimal.fromString("0");
   }
