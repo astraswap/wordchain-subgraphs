@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 description: Astra is a decentralized protocol for automated token exchange on ZeusChain.
-repository: https://github.com/ZeusExchange
+repository: https://github.com/astraswap/wordchain-subgraphs
 schema:
   file: schema.graphql
 dataSources:
