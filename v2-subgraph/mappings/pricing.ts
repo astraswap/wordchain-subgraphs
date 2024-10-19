@@ -31,13 +31,15 @@ export function getETHPriceInUSD(): BigDecimal {
   if (usdcPair !== null) {
     return usdcPair.token1Price;
   } else {
-    return BigDecimal.fromString("0");
+    return BigDecimal.fromString("2640");
   }
 }
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
   "0x79a02482a880bce3f13e09da970dc34db4cd24d1", // DAI
+  "0x4200000000000000000000000000000000000006",
+  "0x604cc420c95f2ee546a1765b0305f725fd6f75b4"
 
 ];
 
