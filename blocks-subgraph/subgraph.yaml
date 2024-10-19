@@ -1,0 +1,25 @@
+specVersion: 0.0.2
+description: Indexing all Arbitrum One Block data
+repository: https://github.com/blocklytics/ethereum-blocks
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: ConverterRegistryContract
+    network: worldchain
+    source:
+      address: '0x6703286A3649a543f75C594e3A82A664643aa243'
+      abi: ConverterRegistryContract
+      startBlock: 4944579
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ConverterAddition
+      abis:
+        - name: ConverterRegistryContract
+          file: ./abis/ConverterRegistryContract.json
+      blockHandlers:
+        - handler: handleBlock
+      file: ./src/mappings/blocks.ts
